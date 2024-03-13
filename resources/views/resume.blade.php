@@ -17,7 +17,7 @@
                         <h2 class="text-3xl font-bold tracking-tight text-zinc-400">Get in touch</h2>
                         <p class="mt-4 leading-7 text-zinc-400">You can reach me anywhere!</p>
                     </div>
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-1 lg:gap-8">
                         <div class="rounded-2xl  p-10 mt-10 md:mt-20">
                             <h3 class="text-base font-semibold leading-7 text-zinc-400">Email and Phone</h3>
                             <dl class="mt-3 space-y-1 text-sm leading-6 text-zinc-400">
@@ -32,7 +32,7 @@
                             </dl>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-1 lg:gap-8">
                         <div class="rounded-2xl  p-10 mt-10 md:mt-20">
                             <h3 class="text-base font-semibold leading-7 text-zinc-400">Social Media</h3>
                             <dl class="mt-3 space-y-1 text-sm leading-6 text-zinc-400">
@@ -49,7 +49,7 @@
                         <h2 class="text-3xl font-bold tracking-tight text-zinc-400">Education</h2>
                         <p class="mt-4 leading-7 text-zinc-400">Work hard, learn hard.</p>
                     </div>
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-1 lg:gap-8">
                         <div class="rounded-2xl  p-10 mt-10 md:mt-20">
                             <h3 class="text-base font-semibold leading-7 text-zinc-400">Full Sail University</h3>
                             <address class="mt-3 space-y-1 text-sm not-italic leading-6 text-zinc-400">
@@ -64,7 +64,7 @@
                         <h2 class="text-3xl font-bold tracking-tight text-zinc-400">Experience</h2>
                         <p class="mt-4 leading-7 text-zinc-400">You gotta get started somewhere!</p>
                     </div>
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-1 lg:gap-8">
                         <div class="rounded-2xl  p-10 mt-10 md:mt-20">
                             <h3 class="text-base font-semibold leading-7 text-zinc-400">Group Projects</h3>
                             <address class="mt-3 space-y-1 text-sm not-italic leading-6 text-zinc-400">
@@ -73,7 +73,7 @@
                             </address>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-1 lg:gap-8">
                         <div class="rounded-2xl  p-10 mt-10 md:mt-20">
                             <h3 class="text-base font-semibold leading-7 text-zinc-400">Game Jams</h3>
                             <address class="mt-3 space-y-1 text-sm not-italic leading-6 text-zinc-400">
