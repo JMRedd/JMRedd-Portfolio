@@ -59,7 +59,7 @@ class GamesController extends Controller
             'languages_used' => 'max:255',
             'primary_roles' => 'max:255',
             'body' => '',
-            'image_path' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust the allowed file types and size
+            'image_path' => 'image|mimes:jpeg,png,jpg,gif|max:20480', // Adjust the allowed file types and size
         ]);
 
         // Handle file upload

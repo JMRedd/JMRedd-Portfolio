@@ -47,4 +47,8 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+    </script>
 </x-guest-layout>
