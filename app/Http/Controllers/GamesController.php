@@ -10,6 +10,16 @@ class GamesController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    public function home()
+    {
+        //
+
+        $games = Games::all();
+
+        return view('home', compact('games'));
+    }
+
     public function index()
     {
         //
