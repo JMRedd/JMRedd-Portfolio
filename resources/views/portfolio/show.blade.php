@@ -43,7 +43,7 @@
 
             <div class="mt-20 text-zinc-100 text-2xl">
 
-                {!! $game->body !!}
+                {{ $game->body }}
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@
                             <dl class="mt-3 space-y-1 text-sm leading-6 text-zinc-400">
                                 <div>
                                     <dt class="sr-only">Email</dt>
-                                    <dd><a class="font-semibold text-indigo-600" href="mailto:reddjustin7@gmail.com">reddjustin7@gmail.com</a></dd>
+                                    <dd><a class="font-semibold text-indigo-600" href="mailto:justin.michael.redd@gmail.com">justin.michael.redd@gmail.com</a></dd>
                                 </div>
                                 <div class="mt-1">
                                     <dt class="sr-only">Phone number</dt>
