@@ -1,47 +1,30 @@
 <x-guest-layout>
-    <div class="relative">
-        <!-- Center the image horizontally on extra-large screens -->
-        <img class="mx-auto rounded" src="https://picsum.photos/1000/500" alt="Firestarter Cover Photo">
-        <div class="absolute bg-gradient-to-t from-black to-transparent opacity-90"></div>
 
-        <!-- Updated text container -->
-        <div class="absolute inset-0 flex items-center justify-center z-10">
-            <h1 class="text-5xl font-bold tracking-tight text-white sm:text-5xl dark:text-zinc-100 text-center">
-                FireStarter
-            </h1>
-        </div>
+    <div class="hidden relative mt-12">
+        <img src="https://cdn2.unrealengine.com/ue-logo-stacked-unreal-engine-w-677x545-fac11de0943f.png" alt="Unreal Engine 5 Logo">
     </div>
 
-    <div class="mt-12 w-3/4">
-        <div class="mt-10 text-zinc-300">
-            <div class="flex items-center mb-4">
-                <h3 class="mr-2">Project Status:</h3>
-                <p>Completed</p>
-            </div>
-            <div class="flex items-center mb-4">
-                <h3 class="mr-2">Project Type:</h3>
-                <p>Personal</p>
-            </div>
-            <div class="flex items-center mb-4">
-                <h3 class="mr-2">Project Duration:</h3>
-                <p>~6 months</p>
-            </div>
-            <div class="flex items-center mb-4">
-                <h3 class="mr-2">Software Used:</h3>
-                <p>Unreal Engine 5</p>
-            </div>
-            <div class="flex items-center mb-4">
-                <h3 class="mr-2">Languages Used:</h3>
-                <p>C++, Blueprints</p>
-            </div>
-            <div class="flex items-center mb-4">
-                <h3 class="mr-2">Primary Role(s):</h3>
-                <p>Tech Lead/Lead Designer/Lead Programmer</p>
-            </div>
-        <h2 class="mt-12 mb-12 text-xl text-zinc-300 sm:text-4xl dark:text-zinc-300">About:</h2>
-        <p class="mt-2 text-zinc-100">Inferno Runner is an action-packed adventure game set in a vibrant and interactive world.
-            Players embody a unique protagonist - a humanoid figure composed entirely of living flames.
-            The objective is to navigate through various levels filled with obstacles, challenges, and puzzles while leaving a blazing trail of destruction.</p>
-        </div>
+    <div class="mx-auto max-w-7xl py-8">
+
+        <h2 class="mt-12 mb-12 text-3xl font-bold tracking-tight text-zinc-300 sm:text-4xl dark:text-zinc-300 text-center">
+            Projects - {{ $games->count() }}:
+        </h2>
+
+        <ul role="list" class="grid gap-x-4 gap-y-8 sm:grid-cols-1 sm:gap-x-6 lg:grid-cols-2 xl:gap-x-8">
+            @foreach($games as $game)
+                <li class="relative">
+                    <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+                        <img src="{{ asset('storage/' . $game->image_path) }}" alt="" class="pointer-events-none object-cover group-hover:opacity-75">
+                        <button type="button" class="absolute inset-0 focus:outline-none">
+                            <span class="sr-only">View details for {{ $game->name }}</span>
+                        </button>
+                    </div>
+                    <p class="mt-2 pointer-events-none block text-lg font-medium text-zinc-300 text-center">{{ $game->name }}</p>
+                </li>
+            @endforeach
+        </ul>
+
     </div>
+
+
 </x-guest-layout>
