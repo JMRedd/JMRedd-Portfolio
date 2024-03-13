@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div class="relative">
         <!-- Center the image horizontally on extra-large screens -->
-        <img class="mx-auto rounded opacity-45" src="http://127.0.0.1:8000/media/UE5-BG.png" alt="Unreal Engine Cover Photo">
+        <img class="mx-auto rounded opacity-45" src="jmredd.com/media/UE5-BG.png" alt="Unreal Engine Cover Photo">
         <div class="absolute bg-gradient-to-t from-black to-transparent opacity-90"></div>
 
         <!-- Updated text container -->
