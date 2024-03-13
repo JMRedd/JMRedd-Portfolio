@@ -16,7 +16,7 @@ class GamesController extends Controller
 
         $games = Games::all();
 
-        return view('home', compact('games'));
+        return view('portfolio.index', compact('games'));
     }
 
     public function count()

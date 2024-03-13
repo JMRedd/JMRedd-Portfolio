@@ -18,7 +18,7 @@
                         <p class="mt-4 leading-7 text-zinc-400">You can reach me anywhere!</p>
                     </div>
                     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
-                        <div class="rounded-2xl bg-gray-50 p-10 mt-10 md:mt-20">
+                        <div class="rounded-2xl  p-10 mt-10 md:mt-20">
                             <h3 class="text-base font-semibold leading-7 text-zinc-400">Email and Phone</h3>
                             <dl class="mt-3 space-y-1 text-sm leading-6 text-zinc-400">
                                 <div>
@@ -27,13 +27,13 @@
                                 </div>
                                 <div class="mt-1">
                                     <dt class="sr-only">Phone number</dt>
-                                    <dd>+1 (555) 905-2345</dd>
+                                    <dd>+1 (864) 557-2981</dd>
                                 </div>
                             </dl>
                         </div>
                     </div>
                     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
-                        <div class="rounded-2xl bg-gray-50 p-10 mt-10 md:mt-20">
+                        <div class="rounded-2xl  p-10 mt-10 md:mt-20">
                             <h3 class="text-base font-semibold leading-7 text-zinc-400">Social Media</h3>
                             <dl class="mt-3 space-y-1 text-sm leading-6 text-zinc-400">
                                 <div>
@@ -50,7 +50,7 @@
                         <p class="mt-4 leading-7 text-zinc-400">Work hard, learn hard.</p>
                     </div>
                     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
-                        <div class="rounded-2xl bg-gray-50 p-10 mt-10 md:mt-20">
+                        <div class="rounded-2xl  p-10 mt-10 md:mt-20">
                             <h3 class="text-base font-semibold leading-7 text-zinc-400">Full Sail University</h3>
                             <address class="mt-3 space-y-1 text-sm not-italic leading-6 text-zinc-400">
                                 <p>Bachelors of Game Design</p>
@@ -65,7 +65,7 @@
                         <p class="mt-4 leading-7 text-zinc-400">You gotta get started somewhere!</p>
                     </div>
                     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
-                        <div class="rounded-2xl bg-gray-50 p-10 mt-10 md:mt-20">
+                        <div class="rounded-2xl  p-10 mt-10 md:mt-20">
                             <h3 class="text-base font-semibold leading-7 text-zinc-400">Group Projects</h3>
                             <address class="mt-3 space-y-1 text-sm not-italic leading-6 text-zinc-400">
                                 <p>Just check out the portfolio</p>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
-                        <div class="rounded-2xl bg-gray-50 p-10 mt-10 md:mt-20">
+                        <div class="rounded-2xl  p-10 mt-10 md:mt-20">
                             <h3 class="text-base font-semibold leading-7 text-zinc-400">Game Jams</h3>
                             <address class="mt-3 space-y-1 text-sm not-italic leading-6 text-zinc-400">
                                 <p>Just check out the portfolio</p>

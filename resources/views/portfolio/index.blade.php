@@ -12,8 +12,6 @@
         </div>
     </div>
 
-
-
     <div class="mt-12 w-3/4">
         <div class="mt-10 text-zinc-300">
             <div class="flex items-center mb-4">

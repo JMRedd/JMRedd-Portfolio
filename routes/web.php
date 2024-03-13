@@ -15,15 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [GamesController::class, 'index'])
-    ->name('home');
+Route::get('/', function () {
+    return view('home');
+});
 
 Route::get('/about', function () {
     return view('about');
-});
-
-Route::get('/portfolio', function () {
-    return view('portfolio.index');
 });
 
 Route::get('/resume', function () {
