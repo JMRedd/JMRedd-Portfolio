@@ -119,24 +119,68 @@ class GamesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Games $games)
+    public function edit($id)
     {
         //
+
+        $game = Games::findOrFail($id);
+
+        return view('portfolio.edit', compact('game'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Games $games)
+    public function update(Request $request, $id)
     {
         //
+
+        $request->validate([
+            'name' => 'required|max:255',
+            'project_status' => 'max:255',
+            'project_type' => 'max:255',
+            'project_duration' => 'max:255',
+            'software_used' => 'max:255',
+            'languages_used' => 'max:255',
+            'primary_roles' => 'max:255',
+            'body' => '',
+            'image_path' => 'image|mimes:jpeg,png,jpg,gif|max:20480', // Adjust the allowed file types and size
+        ]);
+
+        $game = Games::findOrFail($id);
+
+        if ($request->hasFile('image_path')) {
+            $originalName = pathinfo($request->file('image_path')->getClientOriginalName(), PATHINFO_FILENAME);
+            $timestamp = time();
+            $imageName = "{$originalName}_{$timestamp}.{$request->file('image_path')->getClientOriginalExtension()}";
+
+            $imagePath = $request->file('image_path')->storeAs('images', $imageName, 'public');
+            $game->image_path = $imagePath;
+        }
+
+        $game->name = $request->input('name');
+        $game->project_status = $request->input('project_status');
+        $game->project_type = $request->input('project_type');
+        $game->project_duration = $request->input('project_duration');
+        $game->software_used = $request->input('software_used');
+        $game->languages_used = $request->input('languages_used');
+        $game->primary_roles = $request->input('primary_roles');
+        $game->body = $request->input('body');
+        $game->save();
+
+        return redirect('/')->with("success", "Portfolio Article has been updated");
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Games $games)
+    public function destroy($id)
     {
         //
+
+        $game = Games::findOrFail($id);
+        $game->delete();
+
+        return redirect('/')->with("success", "Portfolio Article has been deleted");
     }
 }

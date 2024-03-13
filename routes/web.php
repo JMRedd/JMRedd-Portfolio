@@ -43,9 +43,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/portfolio/create', [GamesController::class, 'create'])->name('portfolio.create');
     Route::post('/portfolio/store', [GamesController::class, 'store'])->name('portfolio.store');
     Route::post('/portfolio/upload', [GamesController::class, 'upload'])->name('portfolio.upload');
-    Route::get('/portfolio/{id}', [GamesController::class, 'edit'])->name('portfolio.edit');
-    Route::patch('/portfolio/{id}', [GamesController::class, 'update'])->name('portfolio.update');
-    Route::delete('/portfolio/{id}', [GamesController::class, 'destroy'])->name('portfolio.destroy');
+    Route::get('/portfolio/edit/{id}', [GamesController::class, 'edit'])->name('portfolio.edit');
+    Route::patch('/portfolio/update/{id}', [GamesController::class, 'update'])->name('portfolio.update');
+    Route::delete('/portfolio/destroy/{id}', [GamesController::class, 'destroy'])->name('portfolio.destroy');
 });
 
 require __DIR__.'/auth.php';
