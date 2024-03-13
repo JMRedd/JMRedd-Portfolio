@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Games;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class GamesController extends Controller
@@ -51,12 +52,12 @@ class GamesController extends Controller
     {
         $request->validate([
             'name' => 'required|max:255',
-            'project_status' => 'required|max:255',
-            'project_type' => 'required|max:255',
-            'project_duration' => 'required|max:255',
-            'software_used' => 'required|max:255',
-            'languages_used' => 'required|max:255',
-            'primary_roles' => 'required|max:255',
+            'project_status' => 'max:255',
+            'project_type' => 'max:255',
+            'project_duration' => 'max:255',
+            'software_used' => 'max:255',
+            'languages_used' => 'max:255',
+            'primary_roles' => 'max:255',
             'body' => '',
             'image_path' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust the allowed file types and size
         ]);
@@ -89,17 +90,19 @@ class GamesController extends Controller
     }
 
 
-    public function uploadImage(Request $request) {
-        $image = $request->file('upload');
+    public function upload(Request $request) : JsonResponse {
+        if ($request->hasFile('upload')) {
+            $originName = $request->file('upload')->getClientOriginalName();
+            $fileName = pathinfo($originName, PATHINFO_FILENAME);
+            $extension = $request->file('upload')->getClientOriginalExtension();
+            $fileName = $fileName . '_' . time() . '.' . $extension;
 
-        $name = hash('sha256', $image->getClientOriginalName()).'.'.$image->getClientOriginalExtension();
-        Storage::disk('public')->putFileAs('blog/userfiles/files/', $image, $name);
+            $request->file('upload')->move(public_path('media'), $fileName);
 
-        return response()->json([
-            'uploaded' => true,
-            'fileName' => $name,
-            'url'      => asset('storage/blog/userfiles/files/'.$name),
-        ]);
+            $url = asset('media/' . $fileName);
+
+            return response()->json(['fileName' => $fileName, 'uploaded'=> 1, 'url' => $url]);
+        }
     }
 
     /**

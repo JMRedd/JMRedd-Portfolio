@@ -78,14 +78,14 @@
     <!-- Initialize CKEditor on the textarea -->
     <script>
         ClassicEditor
-            .create(document.querySelector('#body'), {
+            .create( document.querySelector( '#body' ),{
                 ckfinder: {
-                    uploadUrl: '/portfolio/uploadImage'
+                    uploadUrl: '{{route('portfolio.upload').'?_token='.csrf_token()}}',
                 }
             })
-            .catch(error => {
-                console.error(error);
-            });
+            .catch( error => {
+
+            } );
 
         function validateAndSubmit() {
             var nameField = document.getElementById('name');

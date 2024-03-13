@@ -1,12 +1,12 @@
 <x-guest-layout>
     <div class="relative">
         <!-- Center the image horizontally on extra-large screens -->
-        <img class="mx-auto rounded" src="{{ asset('storage/' . $game->image_path) }}" alt="{{ $game->name }} Cover Photo">
+        <img class="mx-auto rounded opacity-45" src="http://127.0.0.1:8000/media/UE5-BG.png" alt="Unreal Engine Cover Photo">
         <div class="absolute bg-gradient-to-t from-black to-transparent opacity-90"></div>
 
         <!-- Updated text container -->
         <div class="absolute inset-0 flex items-center justify-center z-10">
-            <h1 class="text-5xl font-bold tracking-tight text-white sm:text-5xl dark:text-zinc-100 text-center">
+            <h1 class="text-5xl font-bold tracking-tight text-white sm:text-5xl dark:text-zinc-100 text-center ">
                 {{ $game->name }}
             </h1>
         </div>
