@@ -40,11 +40,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/portfolio', [GamesController::class, 'index'])->name('portfolio.index');
+Route::get('/portfolio/show/{id}', [GamesController::class, 'show'])->name('portfolio.show');
+
 Route::middleware('auth')->group(function () {
-    Route::get('/portfolio', [GamesController::class, 'index'])->name('portfolio.index');
     Route::get('/portfolio/create', [GamesController::class, 'create'])->name('portfolio.create');
     Route::post('/portfolio/store', [GamesController::class, 'store'])->name('portfolio.store');
-    Route::get('/portfolio/show/{id}', [GamesController::class, 'show'])->name('portfolio.show');
     Route::post('/portfolio/uploadImage', [GamesController::class, 'uploadImage'])->name('portfolio.uploadImage');
     Route::get('/portfolio/{id}', [GamesController::class, 'edit'])->name('portfolio.edit');
     Route::patch('/portfolio/{id}', [GamesController::class, 'update'])->name('portfolio.update');
