@@ -4,7 +4,7 @@
 
         <div class="order-1 md:order-1 mb-6 md:mb-0">
             <!-- Image goes here -->
-            <img src="/media/jmredd_portrait.png" alt="Your Image" class="w-1/2 rounded-full m-auto" />
+            <img src="/media/jmredd_portrait.jpg" alt="Your Image" class="w-1/2 rounded-full m-auto" />
         </div>
 
     </div>
