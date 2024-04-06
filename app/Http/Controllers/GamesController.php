@@ -58,36 +58,47 @@ class GamesController extends Controller
             'software_used' => 'max:255',
             'languages_used' => 'max:255',
             'primary_roles' => 'max:255',
+            'file_path' => 'max:255',
+            'itch_link' => 'max:255',
+            'steam_link' => 'max:255',
             'body' => '',
             'image_path' => 'image|mimes:jpeg,png,jpg,gif|max:20480', // Adjust the allowed file types and size
         ]);
 
         // Handle file upload
         if ($request->hasFile('image_path')) {
-            $originalName = pathinfo($request->file('image_path')->getClientOriginalName(), PATHINFO_FILENAME);
-            $timestamp = time();
-            $imageName = "{$originalName}_{$timestamp}.{$request->file('image_path')->getClientOriginalExtension()}";
+            $originName = $request->file('image_path')->getClientOriginalName();
+            $fileName = pathinfo($originName, PATHINFO_FILENAME);
+            $extension = $request->file('image_path')->getClientOriginalExtension();
+            $fileName = $fileName . '_' . time() . '.' . $extension;
 
-            $imagePath = $request->file('image_path')->storeAs('images', $imageName, 'public');
-        } else {
-            return back()->withErrors(['image_path' => 'The image file is required.']);
+            $request->file('image_path')->move(public_path('media'), $fileName);
+
+            $url = asset('media/' . $fileName);
+
+            // Store image path in variable
+            $imagePath = 'media/' . $fileName;
+
+            // Create record in the database
+            Games::create([
+                'name' => $request->input('name'),
+                'project_status' => $request->input('project_status'),
+                'project_type' => $request->input('project_type'),
+                'project_duration' => $request->input('project_duration'),
+                'software_used' => $request->input('software_used'),
+                'languages_used' => $request->input('languages_used'),
+                'primary_roles' => $request->input('primary_roles'),
+                'body' => $request->input('body'),
+                'image_path' => $imagePath, // Assign $imagePath here
+            ]);
+
+            return redirect('/')->with("success", "Portfolio Article has been created");
         }
 
-        // Create record in the database
-        Games::create([
-            'name' => $request->input('name'),
-            'project_status' => $request->input('project_status'),
-            'project_type' => $request->input('project_type'),
-            'project_duration' => $request->input('project_duration'),
-            'software_used' => $request->input('software_used'),
-            'languages_used' => $request->input('languages_used'),
-            'primary_roles' => $request->input('primary_roles'),
-            'body' => $request->input('body'),
-            'image_path' => $imagePath,
-        ]);
-
-        return redirect('/')->with("success", "Portfolio Article has been created");
+        return back()->withErrors(['image_path' => 'The image file is required.']);
     }
+
+
 
 
     public function upload(Request $request) : JsonResponse {

@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('software_used');
             $table->string('languages_used');
             $table->string('primary_roles');
+            $table->string('file_path');
+            $table->string('itch_link');
+            $table->string('steam_link');
             $table->text('body');
             $table->string('image_path')->nullable(); // Add image_path field
             $table->timestamps();
