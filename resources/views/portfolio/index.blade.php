@@ -1,5 +1,14 @@
 <x-guest-layout>
 
+    @auth
+    <div class="mx-auto max-w-7xl py-8">
+
+        <h2 class="mt-12 mb-12 text-3xl font-bold tracking-tight text-zinc-300 sm:text-4xl dark:text-zinc-300 text-center">
+            Showcase Project - Under Development
+        </h2>
+
+    </div>
+    @endauth
     <div class="mx-auto max-w-7xl py-8">
 
         <h2 class="mt-12 mb-12 text-3xl font-bold tracking-tight text-zinc-300 sm:text-4xl dark:text-zinc-300 text-center">

@@ -45,7 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/portfolio/upload', [GamesController::class, 'upload'])->name('portfolio.upload');
     Route::get('/portfolio/edit/{id}', [GamesController::class, 'edit'])->name('portfolio.edit');
     Route::patch('/portfolio/update/{id}', [GamesController::class, 'update'])->name('portfolio.update');
-    Route::delete('/portfolio/destroy/{id}', [GamesController::class, 'destroy'])->name('portfolio.destroy');
+    Route::delete('/portfolio/{id}', [GamesController::class, 'destroy'])->name('portfolio.destroy');
 });
 
 require __DIR__.'/auth.php';

@@ -14,17 +14,17 @@ return new class extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('project_status');
-            $table->string('project_type');
-            $table->string('project_duration');
-            $table->string('software_used');
-            $table->string('languages_used');
-            $table->string('primary_roles');
-            $table->string('file_path');
-            $table->string('itch_link');
-            $table->string('steam_link');
-            $table->text('body');
-            $table->string('image_path')->nullable(); // Add image_path field
+            $table->string('project_status')->nullable();
+            $table->string('project_type')->nullable();
+            $table->string('project_duration')->nullable();
+            $table->string('software_used')->nullable();
+            $table->string('languages_used')->nullable();
+            $table->string('primary_roles')->nullable();
+            $table->string('file_path')->nullable();
+            $table->string('itch_link')->nullable();
+            $table->string('steam_link')->nullable();
+            $table->text('body')->nullable();
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }

@@ -88,6 +88,9 @@ class GamesController extends Controller
                 'software_used' => $request->input('software_used'),
                 'languages_used' => $request->input('languages_used'),
                 'primary_roles' => $request->input('primary_roles'),
+                'file_path' => $request->input('file_path'),
+                'itch_link' => $request->input('itch_link'),
+                'steam_link' => $request->input('steam_link'),
                 'body' => $request->input('body'),
                 'image_path' => $imagePath, // Assign $imagePath here
             ]);
@@ -144,7 +147,7 @@ class GamesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $game = Games::findOrFail($id); // Find the existing record
 
         $request->validate([
             'name' => 'required|max:255',
@@ -154,33 +157,47 @@ class GamesController extends Controller
             'software_used' => 'max:255',
             'languages_used' => 'max:255',
             'primary_roles' => 'max:255',
+            'file_path' => 'max:255',
+            'itch_link' => 'max:255',
+            'steam_link' => 'max:255',
             'body' => '',
             'image_path' => 'image|mimes:jpeg,png,jpg,gif|max:20480', // Adjust the allowed file types and size
         ]);
 
-        $game = Games::findOrFail($id);
-
+        // Handle file upload
         if ($request->hasFile('image_path')) {
-            $originalName = pathinfo($request->file('image_path')->getClientOriginalName(), PATHINFO_FILENAME);
-            $timestamp = time();
-            $imageName = "{$originalName}_{$timestamp}.{$request->file('image_path')->getClientOriginalExtension()}";
+            // Delete the old image file if it exists
+            if (Storage::exists($game->image_path)) {
+                Storage::delete($game->image_path);
+            }
 
-            $imagePath = $request->file('image_path')->storeAs('images', $imageName, 'public');
-            $game->image_path = $imagePath;
+            // Upload and save the new image file
+            $imagePath = $request->file('image_path')->store('media');
+
+            $game->update([
+                'name' => $request->input('name'),
+                'project_status' => $request->input('project_status'),
+                'project_type' => $request->input('project_type'),
+                'project_duration' => $request->input('project_duration'),
+                'software_used' => $request->input('software_used'),
+                'languages_used' => $request->input('languages_used'),
+                'primary_roles' => $request->input('primary_roles'),
+                'file_path' => $request->input('file_path'),
+                'itch_link' => $request->input('itch_link'),
+                'steam_link' => $request->input('steam_link'),
+                'body' => $request->input('body'),
+                'image_path' => $imagePath,
+            ]);
+
+            return redirect('/')->with("success", "Portfolio Article has been updated");
         }
 
-        $game->name = $request->input('name');
-        $game->project_status = $request->input('project_status');
-        $game->project_type = $request->input('project_type');
-        $game->project_duration = $request->input('project_duration');
-        $game->software_used = $request->input('software_used');
-        $game->languages_used = $request->input('languages_used');
-        $game->primary_roles = $request->input('primary_roles');
-        $game->body = $request->input('body');
-        $game->save();
+        // If no new image is uploaded, update other fields without changing the image
+        $game->update($request->only(['name', 'project_status', 'project_type', 'project_duration', 'software_used', 'languages_used', 'primary_roles', 'file_path', 'itch_link', 'steam_link', 'body']));
 
         return redirect('/')->with("success", "Portfolio Article has been updated");
     }
+
 
     /**
      * Remove the specified resource from storage.

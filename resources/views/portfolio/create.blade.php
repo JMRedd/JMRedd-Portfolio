@@ -34,37 +34,51 @@
 
                 <div class="mb-4">
                     <label for="project_status" class="block text-zinc-400 text-sm font-bold mb-2">Project Status:</label>
-                    <input type="text" name="project_status" id="project_status" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded" required>
+                    <input type="text" name="project_status" id="project_status" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
                 </div>
 
                 <div class="mb-4">
                     <label for="project_type" class="block text-zinc-400 text-sm font-bold mb-2">Project Type:</label>
-                    <input type="text" name="project_type" id="project_type" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded" required>
+                    <input type="text" name="project_type" id="project_type" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
                 </div>
 
                 <div class="mb-4">
                     <label for="project_duration" class="block text-zinc-400 text-sm font-bold mb-2">Project Duration:</label>
-                    <input type="text" name="project_duration" id="project_duration" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded" required>
+                    <input type="text" name="project_duration" id="project_duration" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
                 </div>
 
                 <div class="mb-4">
                     <label for="software_used" class="block text-zinc-400 text-sm font-bold mb-2">Software Used:</label>
-                    <input type="text" name="software_used" id="software_used" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded" required>
+                    <input type="text" name="software_used" id="software_used" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
                 </div>
 
                 <div class="mb-4">
                     <label for="languages_used" class="block text-zinc-400 text-sm font-bold mb-2">Languages Used:</label>
-                    <input type="text" name="languages_used" id="languages_used" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded" required>
+                    <input type="text" name="languages_used" id="languages_used" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
                 </div>
 
                 <div class="mb-4">
                     <label for="primary_roles" class="block text-zinc-400 text-sm font-bold mb-2">Primary Roles:</label>
-                    <input type="text" name="primary_roles" id="primary_roles" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded" required>
+                    <input type="text" name="primary_roles" id="primary_roles" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="file_path" class="block text-zinc-400 text-sm font-bold mb-2">Downloadable Files:</label>
+                    <input type="text" name="file_path" id="file_path" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="itch_link" class="block text-zinc-400 text-sm font-bold mb-2">ITCH.IO Link:</label>
+                    <input type="text" name="itch_link" id="itch_link" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="steam_link" class="block text-zinc-400 text-sm font-bold mb-2">STEAM Link:</label>
+                    <input type="text" name="steam_link" id="steam_link" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
                 </div>
 
                 <div class="mb-4">
                     <label for="body" class="block text-zinc-400 text-sm font-bold mb-2">Description:</label>
-                    <!-- Add an ID to target this textarea with CKEditor -->
                     <textarea name="body" id="body" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded"></textarea>
                 </div>
 

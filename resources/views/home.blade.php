@@ -2,12 +2,6 @@
 
     <div class="mt-12 flex justify-center md:flex-row md:text-left">
 
-        <h1 class="text-4xl text-center font-bold tracking-tight text-zinc-800 md:text-5xl dark:text-zinc-100 md:mr-5 md:mb-0">Justin Redd</h1>
-
-    </div>
-
-    <div class="mt-12 flex justify-center md:flex-row md:text-left">
-
         <div class="order-1 md:order-1 mb-6 md:mb-0">
             <!-- Image goes here -->
             <img src="/media/jmredd_portrait.jpg" alt="Your Image" class="w-1/2 rounded-full m-auto" />
@@ -15,7 +9,11 @@
 
     </div>
 
+    <div class="mt-12 flex justify-center md:flex-row md:text-left">
 
+        <h1 class="text-4xl text-center font-bold tracking-tight text-zinc-800 md:text-5xl dark:text-zinc-100 md:mr-5 md:mb-0">Justin Redd</h1>
+
+    </div>
 
     <div class="mt-12 flex flex-col md:flex-row items-center">
 

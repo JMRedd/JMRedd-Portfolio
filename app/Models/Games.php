@@ -17,6 +17,9 @@ class Games extends Model
       'software_used',
       'languages_used',
       'primary_roles',
+        'file_path',
+        'itch_link',
+        'steam_link',
       'body',
         'image_path'
     ];
