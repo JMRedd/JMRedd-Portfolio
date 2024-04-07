@@ -161,7 +161,7 @@ class GamesController extends Controller
             'itch_link' => 'max:255',
             'steam_link' => 'max:255',
             'body' => '',
-            'image_path' => 'image|mimes:jpeg,png,jpg,gif|max:20480', // Adjust the allowed file types and size
+            'image_path' => 'image|mimes:jpeg,png,jpg,gif', // Adjust the allowed file types and size
         ]);
 
         // Handle file upload
