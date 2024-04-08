@@ -55,23 +55,24 @@
             </div>
                 @endif
             <br>
-            <div class="mt-12 flex flex-col md:flex-row items-center">
                 @if(isset($game->file_path))
                 <div class="flex items-center mr-8">
-                    <h3 class="mr-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"><a href="{{ $game->file_path }}">Download Files</a></h3>
+                    <h3 class="mr-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 italic">Download Files...</h3>
+                    <p class="mr-2 text-xl font-extrabold"><a href="{{ $game->file_path }}">LINK</a></p>
                 </div>
                 @endif
                     @if(isset($game->itch_link))
                 <div class="flex items-center mr-8">
-                    <h3 class="mr-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"><a href="{{ $game->itch_link }}">Visit the ITCH.IO Page</a></h3>
+                    <h3 class="mr-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 italic">Visit the ITCH.IO Page...</h3>
+                    <p class="mr-2 text-xl font-extrabold"><a href="{{ $game->itch_link }}">LINK</a></p>
                 </div>
                     @endif
                     @if(isset($game->steam_link))
                 <div class="flex items-center">
-                    <h3 class="mr-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"><a href="{{ $game->steam_link }}">Visit the STEAM Page</a></h3>
+                    <h3 class="mr-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 italic">Visit the STEAM Page...</h3>
+                    <p class="mr-2 text-xl font-extrabold"><a href="{{ $game->steam_link }}">LINK</a></p>
                 </div>
                         @endif
-            </div>
 
             <div class="mt-20 text-zinc-100 text-2xl">
 
