@@ -120,7 +120,7 @@
                             Email
                         </h4>
                         <h5 class="mb-1 font-bold">
-                            justin.m.redd@gmail.com
+                            <a href="mailto:justin.michael.redd@gmail.com">justin.michael.redd@gmail.com</a>
                         </h5>
                     </div>
                     <div>
@@ -128,7 +128,7 @@
                             Phone
                         </h4>
                         <h5 class="mb-1 font-bold">
-                            (888) 888-8888
+                            (864) 557-2981
                         </h5>
                     </div>
                     <div>
