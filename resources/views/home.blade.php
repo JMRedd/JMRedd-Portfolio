@@ -33,7 +33,7 @@
                 </p>
                 <p class="mt-10 text-zinc-400 sm:text-left">
                     Through my educational journey I have developed real world experience and industry skills.
-                    I am proficient in Unreal Engine, Perforce, Jira, Confluence, and I have fundamentals in C#, landscaping, UI design, and general arts.
+                    I am proficient in Unreal Engine, Perforce, Jira, Confluence, and I have fundamentals in C++, landscaping, UI design, and general arts.
                 </p>
 
                 <div class="mt-6 flex gap-6 m-auto">
