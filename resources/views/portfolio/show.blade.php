@@ -58,19 +58,19 @@
                 @if(isset($game->file_path))
                 <div class="flex items-center mr-8">
                     <h3 class="mr-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 italic">Download Files...</h3>
-                    <p class="mr-2 text-xl font-extrabold"><a href="{{ $game->file_path }}">LINK</a></p>
+                    <p class="mr-2 text-xl font-extrabold"><a href="{{ $game->file_path }}" target="_blank">LINK</a></p>
                 </div>
                 @endif
                     @if(isset($game->itch_link))
                 <div class="flex items-center mr-8">
                     <h3 class="mr-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 italic">Visit the ITCH.IO Page...</h3>
-                    <p class="mr-2 text-xl font-extrabold"><a href="{{ $game->itch_link }}">LINK</a></p>
+                    <p class="mr-2 text-xl font-extrabold"><a href="{{ $game->itch_link }}" target="_blank">LINK</a></p>
                 </div>
                     @endif
                     @if(isset($game->steam_link))
                 <div class="flex items-center">
                     <h3 class="mr-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 italic">Visit the STEAM Page...</h3>
-                    <p class="mr-2 text-xl font-extrabold"><a href="{{ $game->steam_link }}">LINK</a></p>
+                    <p class="mr-2 text-xl font-extrabold"><a href="{{ $game->steam_link }}" target="_blank">LINK</a></p>
                 </div>
                         @endif
 
