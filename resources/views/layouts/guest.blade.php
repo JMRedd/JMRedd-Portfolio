@@ -15,6 +15,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script async charset="utf-8" src="//cdn.embedly.com/widgets/platform.js"></script>
 
 </header>
 
