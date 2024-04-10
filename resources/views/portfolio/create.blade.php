@@ -95,7 +95,8 @@
             .create( document.querySelector( '#body' ),{
                 ckfinder: {
                     uploadUrl: '{{route('portfolio.upload').'?_token='.csrf_token()}}',
-                }
+                },
+                mediaEmbed: {previewsInData: true}
             })
             .catch( error => {
 
