@@ -1,10 +1,4 @@
-np    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "3f933c3a5793c1326f7ceda75d90e456",
-    "packages": [
+ "packages": [
         {
             "name": "brick/math",
             "version": "0.11.0",
