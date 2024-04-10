@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <div class="mt-12 w-3/4 mb-20">
+    <div class="mt-12 md:w-3/4 mb-20">
         <div class="mt-10 text-zinc-300">
             @if(isset($game->project_status))
             <div class="md:flex items-center mb-4">
