@@ -19,6 +19,10 @@
         <p class="leading-relaxed mb-2 text-lg font-semibold text-zinc-400 w-3/4">An experienced game designer proficient in Unreal Engine and visual scripting, skilled in C++ programming with fundamentals in 3D art. Passionate about creating immersive gameplay experiences and collaborating in cross-functional teams.</p>
     </div>
 
+    <div class="flex justify-center md:flex-row">
+        <a class="rounded-md bg-white/10 px-2.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20" href="/media/files/ReddJustinResume.docx" download="ReddJustinResume.docx">Download Resume</a>
+    </div>
+
         <div class="container mx-auto max-w-screen-lg space-y-10 p-4 lg:p-8 text-white">
             <!-- Education -->
             <div class="grid grid-cols-1 md:grid-cols-6">
