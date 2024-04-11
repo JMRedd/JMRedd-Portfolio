@@ -21,6 +21,9 @@ class Games extends Model
         'itch_link',
         'steam_link',
       'body',
-        'image_path'
+        'image_path',
+        'is_showcase',
+        'start_date',
+        'end_date'
     ];
 }

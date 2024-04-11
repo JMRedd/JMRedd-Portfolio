@@ -23,6 +23,14 @@
                 </div>
 
                 <div class="mb-4">
+                    <label for="is_showcase" class="block text-zinc-400 text-sm font-bold mb-2">Showcase:</label>
+                    <!-- Hidden input field -->
+                    <input type="hidden" name="is_showcase" value="0">
+                    <!-- Checkbox -->
+                    <input type="checkbox" name="is_showcase" id="is_showcase" class="bg-gray-600 text-zinc-300 p-2 border rounded" value="1">
+                </div>
+
+                <div class="mb-4">
                     <label for="image_path" class="block text-zinc-400 text-sm font-bold mb-2">Image:</label>
                     <input type="file" name="image_path" id="image_path" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
                 </div>
@@ -30,6 +38,16 @@
                 <div class="mb-4">
                     <label for="name" class="block text-zinc-400 text-sm font-bold mb-2">Name:</label>
                     <input type="text" name="name" id="name" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="start_date" class="block text-zinc-400 text-sm font-bold mb-2">Start Date:</label>
+                    <input type="date" name="start_date" id="start_date" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
+                </div>
+
+                <div class="mb-4">
+                    <label for="end_date" class="block text-zinc-400 text-sm font-bold mb-2">Start Date:</label>
+                    <input type="date" name="end_date" id="end_date" class="bg-gray-600 text-zinc-300 w-full p-2 border rounded">
                 </div>
 
                 <div class="mb-4">

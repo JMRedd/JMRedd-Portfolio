@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Games;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class GamesController extends Controller
 {
@@ -25,9 +26,11 @@ class GamesController extends Controller
     {
         //
 
-        $games = Games::all();
+        $showcaseGames = Games::where('is_showcase', 1)->get();
 
-        return view('portfolio.index', compact('games'));
+        $games = Games::orderByRaw("DATE_FORMAT('Y-m-d',end_date)")->get();
+
+        return view('portfolio.index', compact('showcaseGames','games'));
     }
 
     public function count()
@@ -93,6 +96,9 @@ class GamesController extends Controller
                 'steam_link' => $request->input('steam_link'),
                 'body' => $request->input('body'),
                 'image_path' => $imagePath, // Assign $imagePath here
+                'is_showcase' => $request->input('is_showcase'),
+                'start_date' => $request->input('start_date'),
+                'end_date' => $request->input('end_date')
             ]);
 
             return redirect('/')->with("success", "Portfolio Article has been created");
@@ -187,15 +193,18 @@ class GamesController extends Controller
                 'steam_link' => $request->input('steam_link'),
                 'body' => $request->input('body'),
                 'image_path' => $imagePath,
+                'is_showcase' => $request->input('is_showcase'),
+                'start_date' => Carbon::createFromFormat('Y/m/d', $request->input('start_date')),
+                'end_date' => Carbon::createFromFormat('Y/m/d', $request->input('end_date')),
             ]);
 
             return redirect('/')->with("success", "Portfolio Article has been updated");
         }
 
         // If no new image is uploaded, update other fields without changing the image
-        $game->update($request->only(['name', 'project_status', 'project_type', 'project_duration', 'software_used', 'languages_used', 'primary_roles', 'file_path', 'itch_link', 'steam_link', 'body']));
+        $game->update($request->only(['name', 'project_status', 'project_type', 'project_duration', 'software_used', 'languages_used', 'primary_roles', 'file_path', 'itch_link', 'steam_link', 'body', 'is_showcase', 'start_date', 'end_date']));
 
-        return redirect('/')->with("success", "Portfolio Article has been updated");
+        return redirect('/portfolio')->with("success", "Portfolio Article has been updated");
     }
 
 
