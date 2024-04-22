@@ -49,7 +49,7 @@
                         </a>
                     </div>
                     <p class="mt-2 pointer-events-none block text-lg font-medium text-zinc-300 text-center">{{ $game->name }}</p>
-                    <p class="mt-2 pointer-events-none block text-lg font-medium text-zinc-300 text-center">{{ date('d/m/Y', strtotime($game->start_date)) }} to {{ date('d/m/Y', strtotime($game->end_date)) }}</p>
+                    <p class="hidden mt-2 pointer-events-none text-lg font-medium text-zinc-300 text-center">{{ date('d/m/Y', strtotime($game->start_date)) }} to {{ date('d/m/Y', strtotime($game->end_date)) }}</p>
                 </li>
             @endforeach
         </ul>
