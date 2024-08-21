@@ -27,11 +27,11 @@
                     As a passionate game designer, I immerse myself in the ever-evolving world of interactive entertainment, where creativity meets innovation.
                     My journey in game design is fueled by a relentless curiosity and a deep appreciation for the artistry of digital storytelling.</p>
 
-                <p class="mt-10 text-zinc-400 sm:text-left">I am a junior game designer, artist, creative collaborator, writer and storyteller.
+                <p class="mt-10 text-zinc-100 sm:text-left">I am a junior game designer, artist, creative collaborator, writer and storyteller.
                     I have 3 years experience with a specialty in systems and level design. I aspire to create experiences through games that leave a lasting impact.
                     I currently study at Full Sail University and I'm schedule to graduate March 2024.
                 </p>
-                <p class="mt-10 text-zinc-400 sm:text-left">
+                <p class="mt-10 text-zinc-100 sm:text-left">
                     Through my educational journey I have developed real world experience and industry skills.
                     I am proficient in Unreal Engine, Perforce, Jira, Confluence, and I have fundamentals in C++, landscaping, UI design, and general arts.
                 </p>

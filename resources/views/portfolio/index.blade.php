@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-    @auth
+
     <div class="mx-auto max-w-7xl">
 
         <h2 class="mb-12 text-3xl font-bold tracking-tight text-zinc-300 sm:text-4xl dark:text-zinc-300 text-center">
@@ -26,10 +26,8 @@
             </ul>
         </div>
 
-
-
     </div>
-    @endauth
+
     <div class="mx-auto max-w-7xl">
 
         <h2 class="mb-12 text-3xl font-bold tracking-tight text-zinc-300 sm:text-4xl dark:text-zinc-300 text-center">
