@@ -11,7 +11,7 @@
 
     <div class="mt-12 flex justify-center md:flex-row md:text-left">
 
-        <h1 class="text-4xl text-center font-bold tracking-tight text-zinc-800 md:text-5xl dark:text-zinc-100 md:mr-5 md:mb-0">Justin Redd</h1>
+        <h1 class="text-4xl text-center font-bold tracking-tight text-zinc-800 md:text-5xl dark:text-zinc-100 md:mr-5 md:mb-0">Justin Michael Redd</h1>
 
     </div>
 
