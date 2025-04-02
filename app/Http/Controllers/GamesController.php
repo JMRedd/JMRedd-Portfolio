@@ -66,6 +66,7 @@ class GamesController extends Controller
             'steam_link' => 'max:255',
             'body' => '',
             'image_path' => 'image|mimes:jpeg,png,jpg,gif', // Adjust the allowed file types and size
+
         ]);
 
         // Handle file upload
@@ -98,7 +99,8 @@ class GamesController extends Controller
                 'image_path' => $imagePath, // Assign $imagePath here
                 'is_showcase' => $request->input('is_showcase'),
                 'start_date' => $request->input('start_date'),
-                'end_date' => $request->input('end_date')
+                'end_date' => $request->input('end_date'),
+                'hide' => $request->input('hide'),
             ]);
 
             return redirect('/')->with("success", "Portfolio Article has been created");
@@ -196,15 +198,16 @@ class GamesController extends Controller
                 'is_showcase' => $request->input('is_showcase'),
                 'start_date' => Carbon::createFromFormat('Y/m/d', $request->input('start_date')),
                 'end_date' => Carbon::createFromFormat('Y/m/d', $request->input('end_date')),
+                'hide' => $request->input('hide'),
             ]);
 
             return redirect('/')->with("success", "Portfolio Article has been updated");
         }
 
         // If no new image is uploaded, update other fields without changing the image
-        $game->update($request->only(['name', 'project_status', 'project_type', 'project_duration', 'software_used', 'languages_used', 'primary_roles', 'file_path', 'itch_link', 'steam_link', 'body', 'is_showcase', 'start_date', 'end_date']));
+        $game->update($request->only(['name', 'project_status', 'project_type', 'project_duration', 'software_used', 'languages_used', 'primary_roles', 'file_path', 'itch_link', 'steam_link', 'body', 'is_showcase', 'start_date', 'end_date', 'hide']));
 
-        return redirect('/portfolio')->with("success", "Portfolio Article has been updated");
+        return redirect('/portfolio/')->with("success", "Portfolio Article has been updated");
     }
 
 

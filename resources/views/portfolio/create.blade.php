@@ -23,6 +23,14 @@
                 </div>
 
                 <div class="mb-4">
+                    <label for="is_showcase" class="block text-zinc-400 text-sm font-bold mb-2">Hide:</label>
+                    <!-- Hidden input field -->
+                    <input type="hidden" name="hide" value="0">
+                    <!-- Checkbox -->
+                    <input type="checkbox" name="hide" id="hide" class="bg-gray-600 text-zinc-300 p-2 border rounded" value="1">
+                </div>
+
+                <div class="mb-4">
                     <label for="is_showcase" class="block text-zinc-400 text-sm font-bold mb-2">Showcase:</label>
                     <!-- Hidden input field -->
                     <input type="hidden" name="is_showcase" value="0">

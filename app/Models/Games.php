@@ -24,6 +24,7 @@ class Games extends Model
         'image_path',
         'is_showcase',
         'start_date',
-        'end_date'
+        'end_date',
+        'hide'
     ];
 }
