@@ -23,17 +23,19 @@
             </h2>
 
             <div>
-                <p class="hidden mt-10 text-zinc-400 sm:text-left">I'm Justin Redd, a video game designer, artist, creative collaborator, writer and storyteller.
+                <p class="hidden mt-10 text-zinc-400 sm:text-left">Hi! I'm Justin Redd, a video game designer, artist, creative collaborator, writer and storyteller.
                     As a passionate game designer, I immerse myself in the ever-evolving world of interactive entertainment, where creativity meets innovation.
                     My journey in game design is fueled by a relentless curiosity and a deep appreciation for the artistry of digital storytelling.</p>
 
-                <p class="mt-10 text-zinc-100 sm:text-left">I am a junior game designer, artist, creative collaborator, writer and storyteller.
-                    I have 3 years experience with a specialty in systems and level design. I aspire to create experiences through games that leave a lasting impact.
-                    I currently study at Full Sail University and I'm schedule to graduate March 2024.
+                <p class="mt-10 text-zinc-100 sm:text-left">Hi! I'm Justin Redd, a video game designer, artist, creative collaborator, writer and storyteller.
+                    As a passionate game designer, I immerse myself in the ever-evolving world of interactive entertainment, where creativity meets innovation.
+                    My journey in game design is fueled by a relentless curiosity and a deep appreciation for the artistry of digital storytelling.
+                    I specialize in systems and level design. I aspire to create timeless, immersive worlds where players can escape and feel free.
+                    I am a proud Game Design Bachelor's graduate from Full Sail University, as of April 2024.
                 </p>
                 <p class="mt-10 text-zinc-100 sm:text-left">
                     Through my educational journey I have developed real world experience and industry skills.
-                    I am proficient in Unreal Engine, Perforce, Jira, Confluence, and I have fundamentals in C++, landscaping, UI design, and general arts.
+                    I am proficient in Unreal Engine, Perforce, Jira, Confluence, and I have strong foundation in Unity, C# programming, landscaping, UI design, and general arts.
                 </p>
 
                 <div class="mt-6 flex gap-6 m-auto">
