@@ -17,20 +17,40 @@ class GamesController extends Controller
     {
         //
 
-        $games = Games::all();
+       // $games = Games::all();
 
-        return view('home', compact('games'));
+        // return view('home', compact('games'));
+        //changed the above code to what is listed bellow 
+
+$showcaseGames = Games::where('is_showcase', 1)->get();  // Showcase projects only
+    $games = Games::where('is_showcase', 0)->get();          // All other projects (non-showcase)
+
+    return view('home', compact('games', 'showcaseGames'));
+
+
     }
 
     public function index()
     {
         //
 
+      //  $showcaseGames = Games::where('is_showcase', 1)->get();
+
+       // $games = Games::orderByRaw("DATE_FORMAT('Y-m-d',end_date)")->get();
+
+       // return view('portfolio.index', compact('showcaseGames','games'));
+       //changed the aboove code to what is listed bellow- justin
+
+
         $showcaseGames = Games::where('is_showcase', 1)->get();
+        $otherGames = Games::where('is_showcase', 0)
+                ->orderBy('end_date', 'desc')
+                ->get();
 
-        $games = Games::orderByRaw("DATE_FORMAT('Y-m-d',end_date)")->get();
+            return view('portfolio.index', compact('showcaseGames', 'otherGames'));
 
-        return view('portfolio.index', compact('showcaseGames','games'));
+
+
     }
 
     public function count()

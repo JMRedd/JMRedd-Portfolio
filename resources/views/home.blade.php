@@ -38,7 +38,7 @@
 
                 <div class="mt-6 flex gap-6 m-auto">
                     <a class="group -m-1 p-1" aria-label="Follow on X" href="https://twitter.com/Justin_M_Redd" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"><path d="M13.3174 10.7749L19.1457 4H17.7646L12.7039 9.88256L8.66193 4H4L10.1122 12.8955L4 20H5.38119L10.7254 13.7878L14.994 20H19.656L13.3171 10.7749H13.3174ZM11.4257 12.9738L10.8064 12.0881L5.87886 5.03974H8.00029L11.9769 10.728L12.5962 11.6137L17.7652 19.0075H15.6438L11.4257 12.9742V12.9738Z"></path></svg></a>
-                    <a class="group -m-1 p-1" aria-label="Follow on YouTube" href="https://youtube.com/@JustinRedd__Projects?si=XT1vdiS3hmijsPVy" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="w-6 h-6" viewBox="0 0 256 256" xml:space="preserve">
+                    <a class="group -m-1 p-1" aria-label="Follow on YouTube" href="https://www.youtube.com/@DevelopmentLogs" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="w-6 h-6" viewBox="0 0 256 256" xml:space="preserve">
 
                             <defs>
                             </defs>
@@ -56,11 +56,37 @@
         </div>
 
     <div class="mx-auto max-w-7xl py-8">
-
+{{-- commenting out this- justin
         <h3 class="mt-12 mb-12 text-3xl font-bold tracking-tight text-zinc-300 sm:text-4xl dark:text-zinc-300 text-center">
             Portfolio Projects - {{ $games->count() }}
         </h3>
+--}}
 
+{{--Chatgpt helped me write this new section--}}
+<h2 class="mt-12 mb-6 text-3xl font-bold tracking-tight text-zinc-300 sm:text-4xl dark:text-zinc-300 text-center">
+    Showcase Projects - {{ $showcaseGames->count() }}
+</h2>
+
+<ul role="list" class="{{ count($showcaseGames) === 1 ? 'grid grid-cols-1' : 'grid gap-x-4 gap-y-8 sm:grid-cols-1 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8' }}">
+    @foreach($showcaseGames as $game)
+        @if (!$game->hide)
+            <li class="relative">
+                <div class="group block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+                    <a href="portfolio/show/{{ $game->id }}">
+                        <img src="{{ $game->image_path }}" alt="{{ $game->name }}" class="pointer-events-none object-cover w-full h-48 group-hover:opacity-75">
+                        <button type="button" class="absolute inset-0 focus:outline-none">
+                            <span class="sr-only">View details for {{ $game->name }}</span>
+                        </button>
+                    </a>
+                </div>
+                <p class="mt-2 pointer-events-none block text-lg font-medium text-zinc-300 text-center">{{ $game->name }}</p>
+            </li>
+        @endif
+    @endforeach
+</ul>
+
+
+{{-- trying to fix showcase screen and remove all projects from home- justin
         <ul role="list" class="grid gap-x-4 gap-y-8 sm:grid-cols-1 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8">
             @foreach($games as $game)
                 <li class="relative">
@@ -77,7 +103,7 @@
                 </li>
             @endforeach
         </ul>
-
+--}}
 
 
     </div>
