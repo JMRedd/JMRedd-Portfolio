@@ -10,7 +10,7 @@
         <div class="flex justify-center">
             <ul role="list" class="{{ count($showcaseGames) === 1 ? 'grid grid-cols-1' : 'grid gap-x-4 gap-y-8 sm:grid-cols-1 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8' }}">
                 @foreach($showcaseGames as $game)
-                @if (!$game->hide)
+                {{-- NEED A WAY TO UNHIDE STUFF AFTER ITS HIDDEN- justin @if (!$game->hide) --}}
                     <li class="relative">
                         <div class="group block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
                             <a href="/portfolio/show/{{ $game->id }}">
@@ -23,7 +23,7 @@
                         </div>
                         <p class="mt-2 pointer-events-none block text-lg font-medium text-zinc-300 text-center">{{ $game->name }}</p>
                     </li>
-                    @endif
+                   {{-- NEED A WAY TO UNHIDE STUFF AFTER ITS HIDDEN- justin @endif --}}
                 @endforeach
             </ul>
         </div>
@@ -39,7 +39,7 @@
 
         <ul role="list" class="grid gap-x-4 gap-y-8 sm:grid-cols-1 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8">
             @foreach($games as $game)
-            @if (!$game->hide)
+             {{-- NEED A WAY TO UNHIDE STUFF AFTER ITS HIDDEN- justin @if (!$game->hide) --}}
                 <li class="relative">
                     <div class="group block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
                         <a href="/portfolio/show/{{ $game->id }}">
@@ -53,7 +53,7 @@
                     <p class="mt-2 pointer-events-none block text-lg font-medium text-zinc-300 text-center">{{ $game->name }}</p>
                     <p class="hidden mt-2 pointer-events-none text-lg font-medium text-zinc-300 text-center">{{ date('d/m/Y', strtotime($game->start_date)) }} to {{ date('d/m/Y', strtotime($game->end_date)) }}</p>
                 </li>
-                @endif
+               {{-- NEED A WAY TO UNHIDE STUFF AFTER ITS HIDDEN- justin @endif --}}
             @endforeach
         </ul>
     --}}
@@ -64,7 +64,7 @@
 
         <ul role="list" class="grid gap-x-4 gap-y-8 sm:grid-cols-1 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8">
             @foreach($otherGames as $game)
-            @if (!$game->hide)
+            {{-- NEED A WAY TO UNHIDE STUFF AFTER ITS HIDDEN- justin  @if (!$game->hide) --}}
                 <li class="relative">
                     <div class="group block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
                         <a href="/portfolio/show/{{ $game->id }}">
@@ -78,7 +78,7 @@
                     <p class="mt-2 pointer-events-none block text-lg font-medium text-zinc-300 text-center">{{ $game->name }}</p>
                     <p class="hidden mt-2 pointer-events-none text-lg font-medium text-zinc-300 text-center">{{ date('d/m/Y', strtotime($game->start_date)) }} to {{ date('d/m/Y', strtotime($game->end_date)) }}</p>
                 </li>
-            @endif
+             {{-- NEED A WAY TO UNHIDE STUFF AFTER ITS HIDDEN- justin @endif --}}
             @endforeach
         </ul>
 
